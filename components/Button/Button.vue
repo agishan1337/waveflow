@@ -1,6 +1,6 @@
 <template>
   <button :class="['flex', 'rounded-full', 'px-6', 'py-3', 'bg-primary', 'hover:bg-primarydarkHover', 'transition', 'text-white', 'text-body-small', 'font-Poppins', { 'w-full': fullwidth, 'justify-center': fullwidth }]">
-    <img v-if="iconPath" :src="iconPath" alt="icon" class="button-icon" />
+    <img v-if="iconPath" :src=iconPath alt="icon" />
     <span>{{ label }}</span>
   </button>
 </template>
@@ -24,9 +24,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-.button-icon {
-  margin-right: 8px;
-}
-</style>
+<style scoped></style>

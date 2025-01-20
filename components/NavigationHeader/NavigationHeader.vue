@@ -85,7 +85,7 @@
           >
             Contact
           </a>
-          <Button label="Get Started" fullwidth/>
+          <Button label="Get Started"  fullwidth/>
       </nav>
     </div>
   </header>
