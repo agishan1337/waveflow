@@ -9,6 +9,8 @@ export default {
       colors: {
         primary: "#0066FF",
         primaryHover: "#F4F9FF",
+        primarydarkHover: "#194AD2",
+        greyHover: "#F8FAFC",
         textPrimary: "#121212",
         textSecondary: "#697586",
         strokeColour: "#F8F8F8",

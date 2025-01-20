@@ -1,6 +1,7 @@
 <template >
 <NavigationHeader/>
 <HeroSection/>
+
 </template>
 
 <style>

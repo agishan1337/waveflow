@@ -1,5 +1,5 @@
 <template>
-  <button :class="['flex', 'rounded-full', 'px-6', 'py-3', 'bg-primary', 'text-white', 'text-body-small', 'font-Poppins', { 'w-full': fullwidth, 'justify-center': fullwidth }]">
+  <button :class="['flex', 'rounded-full', 'px-6', 'py-3', 'bg-primary', 'hover:bg-primarydarkHover', 'transition', 'text-white', 'text-body-small', 'font-Poppins', { 'w-full': fullwidth, 'justify-center': fullwidth }]">
     <img v-if="iconPath" :src="iconPath" alt="icon" class="button-icon" />
     <span>{{ label }}</span>
   </button>
