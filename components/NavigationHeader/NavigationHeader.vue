@@ -1,7 +1,7 @@
 <template>
-  <header class="fixed inset-x-0 top-0 ">
-    <div class="relative z-[999] mx-auto mt-5 flex w-full items-start justify-center px-4  ">
-      <div class="flex min-h-16 w-full items-center justify-between gap-8 px-5 md:min-h-18 md:px-4 md:w-auto border border-strokeColor rounded-full shadow-sm">
+  <header class="fixed inset-x-0 top-0 z-40 ">
+    <div class="relative mx-auto mt-5 flex w-full items-start justify-center px-4">
+      <div class="flex min-h-16 w-full items-center justify-between gap-8 px-5 md:min-h-18 md:px-4 md:w-auto border border-strokeColor rounded-full shadow-sm bg-white bg-opacity-80 backdrop-blur-md">
         <!-- Logo -->
         <div>
           <img 

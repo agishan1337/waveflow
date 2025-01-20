@@ -23,7 +23,7 @@ export default {
         h1: [
           "64px",
           {
-            lineHeight: "64px",
+            lineHeight: "80px",
             letterSpacing: "0px",
             fontWeight: "400",
           },
@@ -31,7 +31,7 @@ export default {
         h2: [
           "48px",
           {
-            lineHeight: "57.5px",
+            lineHeight: "56px",
             letterSpacing: "0px",
             fontWeight: "400",
           },
@@ -39,7 +39,7 @@ export default {
         h3: [
           "32px",
           {
-            lineHeight: "38.5px",
+            lineHeight: "38px",
             letterSpacing: "0px",
             fontWeight: "400",
           },
@@ -47,7 +47,7 @@ export default {
         "body-small": [
           "14px",
           {
-            lineHeight: "19.5px",
+            lineHeight: "20px",
             letterSpacing: "0px",
             fontWeight: "400",
           },
@@ -63,7 +63,7 @@ export default {
         "body-small-medium": [
           "14px",
           {
-            lineHeight: "16.8px",
+            lineHeight: "16x",
             letterSpacing: "0px",
             fontWeight: "500",
           },
@@ -79,7 +79,7 @@ export default {
         "body-large": [
           "18px",
           {
-            lineHeight: "21.5px",
+            lineHeight: "24px",
             letterSpacing: "0px",
             fontWeight: "400",
           },
@@ -87,7 +87,7 @@ export default {
         "body-extra-large": [
           "24px",
           {
-            lineHeight: "24px",
+            lineHeight: "32px",
             letterSpacing: "0px",
             fontWeight: "400",
           },

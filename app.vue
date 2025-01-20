@@ -1,5 +1,6 @@
-<template>
- <NavigationHeader/>
+<template >
+<NavigationHeader/>
+<HeroSection/>
 </template>
 
 <style>
