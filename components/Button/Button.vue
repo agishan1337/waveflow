@@ -1,7 +1,18 @@
 <template>
-  <button :class="['flex', 'rounded-full', 'px-6', 'py-3', 'bg-primary', 'hover:bg-primarydarkHover', 'transition', 'text-white', 'text-body-small', 'font-Poppins', { 'w-full': fullwidth, 'justify-center': fullwidth }]">
-    <img v-if="iconPath" :src=iconPath alt="icon" />
-    <span>{{ label }}</span>
+  <button :class="[
+    'flex',
+    'items-center',
+    'rounded-full',
+    iconPath ? 'pl-4 pr-6' : 'px-6',
+    'py-3',
+    'transition',
+    'text-body-small',
+    'font-Poppins',
+    variant === 'secondary' ? 'bg-secondary hover:bg-secondaryHover text-textPrimary' : 'bg-primary hover:bg-primarydarkHover text-white',
+    { 'w-full': fullwidth, 'justify-center': fullwidth }
+  ]">
+    <img class="w-5 h-5" v-if="iconPath" :src=iconPath alt="icon" />
+    <p class="text-body-small font-Poppins font-medium" :class="{ 'ml-2': iconPath }">{{ label }}</p>
   </button>
 </template>
 
@@ -19,6 +30,11 @@ export default {
     fullwidth: {
       type: Boolean,
       required: false
+    },
+    variant: {
+      type: String,
+      default: 'primary',
+      validator: (value) => ['primary', 'secondary'].includes(value)
     }
   }
 }

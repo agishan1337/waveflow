@@ -35,7 +35,7 @@
 
         <!-- CTA Button -->
         <div class="hidden md:block">
-         <Button label="Get Started" />
+         <Button iconPath="/assets/Icons/Apple.svg" label="Download for Mac" />
         </div>
 
         <!-- Mobile Menu Button -->
@@ -85,7 +85,7 @@
           >
             Contact
           </a>
-          <Button label="Get Started"  fullwidth/>
+         <Button iconPath="/assets/Icons/Apple.svg" label="Download for Mac" fullwidth />
       </nav>
     </div>
   </header>
