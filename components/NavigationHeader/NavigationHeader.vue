@@ -1,7 +1,7 @@
 <template>
   <header class="fixed inset-x-0 top-0 z-40" :class="{ 'animate-slideDown': true }">
     <div class="relative mx-auto mt-5 flex w-full items-start justify-center px-4">
-      <div class="flex min-h-16 w-full items-center justify-between gap-8 px-5 md:min-h-18 md:px-4 md:w-auto border border-strokeColor rounded-full shadow-sm bg-white bg-opacity-80 backdrop-blur-md">
+      <div class="navbar-glass flex min-h-16 w-full items-center justify-between gap-8 px-5 md:min-h-18 md:px-4 md:w-auto border border-strokeColor rounded-full shadow-sm">
         <!-- Logo -->
         <div>
           <img 
@@ -120,5 +120,17 @@ export default {
 
 .animate-slideDown {
   animation: slideDown 0.4s ease-in-out forwards;
+}
+
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(45px);
+  backdrop-filter: blur(10px);
+}
+
+@supports not (backdrop-filter: blur(45px)) {
+  .navbar-glass {
+    background: rgba(255, 255, 255, 0.95);
+  }
 }
 </style>
