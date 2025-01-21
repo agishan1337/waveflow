@@ -54,7 +54,10 @@
 
         <!-- Mobile Menu Button -->
         <button
-          class="md:hidden text-gray-800 focus:outline-none"
+          :class="[
+            'md:hidden focus:outline-none',
+            isDark ? 'text-white' : 'text-gray-800'
+          ]"
           @click="toggleMobileMenu"
         >
           <svg
@@ -80,7 +83,9 @@
       v-if="mobileMenuOpen"
       :class="[
         'md:hidden shadow-md mx-4 mt-2 rounded-xl transition-all duration-300',
-        isDark ? 'bg-bgDark bg-opacity-70 backdrop-blur-lg' : 'bg-white'
+        isDark 
+          ? 'border border-darkStrokeColour bg-darkHover bg-opacity-100 backdrop-blur-lg' 
+          : 'bg-white'
       ]"
     >
       <nav class="space-y-2 py-4 px-4">

@@ -17,8 +17,8 @@ import UsecasesCard from './UsecasesCard.vue';
             <UsecasesCard icon="/assets/Usecases/Icons/Icon5.svg" title="Education" description="Automate your web interactions effortlessly with customizable, user-friendly plugins designed for seamless integration."/>
             <UsecasesCard icon="/assets/Usecases/Icons/Icon6.svg" title="Media & Podcasting" description="Automate your web interactions effortlessly with customizable, user-friendly plugins designed for seamless integration."/>
          </div>
-          <div class="absolute inset-x-0 bottom-0 w-full h-1/2 z-0 overflow-hidden">
-            <img class="w-full  object-cover" src="/assets/UseCases/Background.png" alt="">
+          <div class="absolute inset-x-0 bottom-0 w-full h-full z-0">
+            <img class="absolute bottom-0 w-full h-1/2 object-bottom" src="/assets/UseCases/Background.png" alt="">
         </div>
     </section>
      
