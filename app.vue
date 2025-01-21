@@ -49,6 +49,7 @@ import Usecases from './components/UseCases/Usecases.vue';
     }
   ]"
 />
+<FAQSection/>
 
 </template>
 
