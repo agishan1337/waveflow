@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed inset-x-0 top-0 z-40 ">
+  <header class="fixed inset-x-0 top-0 z-40" :class="{ 'animate-slideDown': true }">
     <div class="relative mx-auto mt-5 flex w-full items-start justify-center px-4">
       <div class="flex min-h-16 w-full items-center justify-between gap-8 px-5 md:min-h-18 md:px-4 md:w-auto border border-strokeColor rounded-full shadow-sm bg-white bg-opacity-80 backdrop-blur-md">
         <!-- Logo -->
@@ -107,5 +107,18 @@ export default {
 </script>
 
 <style scoped>
-/* Add any additional styles here if necessary */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.4s ease-in-out forwards;
+}
 </style>
