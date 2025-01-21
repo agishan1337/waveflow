@@ -49,6 +49,7 @@ import Usecases from './components/UseCases/Usecases.vue';
     }
   ]"
 />
+<TestimonialsSection/>
 <FAQSection
   label="Support"
   title="FAQ's"
