@@ -11,11 +11,10 @@ export default {
         primaryHover: "#F4F9FF",
         primarydarkHover: "#194AD2",
         greyHover: "#F8FAFC",
+        bgDark: "#030B14",
         textPrimary: "#121212",
         textSecondary: "#697586",
         strokeColour: "#F8F8F8",
-        primaryOpacity: "#0D3D741A",
-        lightBlue: "#90B0D4"
       },
       fontFamily: {
         Sora: ["Sora", "serif"],

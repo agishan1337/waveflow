@@ -1,7 +1,13 @@
+<script setup lang="ts">
+import Usecases from './components/UseCases/Usecases.vue';
+
+</script>
+
 <template >
 <NavigationHeader/>
 <HeroSection/>
 <ProductShowcase/>
+<Usecases/>
 
 </template>
 
