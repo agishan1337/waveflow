@@ -77,7 +77,7 @@ import Usecases from './components/UseCases/Usecases.vue';
     }
   ]"
 />
-
+<Footer/>
 </template>
 
 <style>

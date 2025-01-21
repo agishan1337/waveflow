@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [  
-    "./components/**/*.vue",
-    "./app.vue",
-  ],
+  content: ["./components/**/*.vue", "./app.vue"],
   theme: {
     extend: {
       colors: {
@@ -81,6 +78,14 @@ export default {
             fontWeight: "400",
           },
         ],
+        "footer-xsmall": [
+          "10px",
+          {
+            lineHeight: "14px",
+            letterSpacing: "0px",
+            fontWeight: "400",
+          },
+        ],
         "body-large": [
           "18px",
           {
@@ -109,4 +114,4 @@ export default {
     },
   },
   plugins: [],
-}
+};
