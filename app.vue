@@ -3,7 +3,7 @@ import Usecases from './components/UseCases/Usecases.vue';
 
 </script>
 
-<template >
+<template>
 <NavigationHeader/>
 <HeroSection 
   title='The <span class="text-primary">AI notepad</span> people in back-to-back meetings'
@@ -50,6 +50,7 @@ import Usecases from './components/UseCases/Usecases.vue';
   ]"
 />
 <FAQSection
+  label="Support"
   title="FAQ's"
   description="Everything you need to know about WaveFlow. Can't find the answer you're looking for? Please chat with our friendly team."
   :faqs="[
