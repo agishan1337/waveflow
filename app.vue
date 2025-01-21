@@ -8,6 +8,8 @@ import Usecases from './components/UseCases/Usecases.vue';
 <HeroSection/>
 <ProductShowcase/>
 <Usecases/>
+<HeroSection/>
+<HeroSection/>
 
 </template>
 
