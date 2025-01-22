@@ -14,3 +14,13 @@
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+defineProps<{
+    avatar: string;
+    name: string;
+    designation: string;
+    testimonialTitle: string;
+    testimonialDescription: string;
+}>();
+</script>

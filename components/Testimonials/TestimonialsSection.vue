@@ -2,6 +2,20 @@
 import TestimonialsCard from './TestimonialsCard.vue';
 import { ref } from 'vue';
 
+interface TestimonialProps {
+    title: string;
+    description: string;
+    testimonials: Array<{
+        avatar: string;
+        name: string;
+        designation: string;
+        testimonialTitle: string;
+        testimonialDescription: string;
+    }>;
+}
+
+defineProps<TestimonialProps>();
+
 const isHovered = ref(false);
 
 const handleMouseEnter = () => {
@@ -25,18 +39,19 @@ const handleMouseLeave = () => {
   width: 100%;
   overflow: hidden;
   position: relative;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 .ticker-wrapper {
   display: flex;
   gap: 2rem;
-  animation: ticker 40s linear infinite;
+  animation: ticker 20s linear infinite;
   padding: 0 2rem;
-  width: max-content;
 }
 
 .ticker-wrapper.reverse {
-  animation: ticker-reverse 40s linear infinite;
+  animation: ticker-reverse 20s linear infinite;
 }
 
 .ticker-wrapper:hover {
@@ -44,20 +59,20 @@ const handleMouseLeave = () => {
 }
 
 @keyframes ticker {
-  0% {
-    transform: translateX(calc(0%));
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(calc(-33.33333%));
+  to {
+    transform: translateX(-50%);
   }
 }
 
 @keyframes ticker-reverse {
-  0% {
-    transform: translateX(calc(-33.33333%));
+  from {
+    transform: translateX(-50%);
   }
-  100% {
-    transform: translateX(calc(0%));
+  to {
+    transform: translateX(0);
   }
 }
 
@@ -78,8 +93,8 @@ const handleMouseLeave = () => {
     <section class="relative py-12 md:py-16 lg:py-32 flex flex-col gap-8 md:gap-12 lg:gap-16 items-center justify-center">
         <div class="flex flex-col gap-4 md:gap-8 lg:max-w-4xl z-10 items-center px-4 md:px-16 lg:px-24">
             <Chip label="Testimonials"/>
-            <h2 class="text-body-extra-large md:text-h3 lg:text-h2 font-Poppins font-semibold md:font-semibold lg:font-semibold text-center text-textPrimary">What our users are say</h2>
-            <p class="md:text-body-large text-body-small font-Sora text-textSecondary text-center">Hear what our users have to say about Waveflow's user-friendly interface and powerful automation features.</p>
+            <h2 class="text-body-extra-large md:text-h3 lg:text-h2 font-Poppins font-semibold md:font-semibold lg:font-semibold text-center text-textPrimary">{{ title }}</h2>
+            <p class="md:text-body-large text-body-small font-Sora text-textSecondary text-center">{{ description }}</p>
         </div>
         
         <div class="testimonials-wrapper">
@@ -87,34 +102,14 @@ const handleMouseLeave = () => {
                 @mouseenter="handleMouseEnter" 
                 @mouseleave="handleMouseLeave">
                 <div class="ticker-wrapper" :style="{ animationPlayState: isHovered ? 'paused' : 'running' }">
-                    <!-- First set of cards -->
                     <div class="testimonials-row">
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
+                        <div v-for="testimonial in testimonials" :key="testimonial.name" class="card-container">
+                            <TestimonialsCard v-bind="testimonial"/>
                         </div>
                     </div>
-                    <!-- Duplicate set for seamless loop -->
                     <div class="testimonials-row">
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
+                        <div v-for="testimonial in testimonials" :key="testimonial.name + '_dup'" class="card-container">
+                            <TestimonialsCard v-bind="testimonial"/>
                         </div>
                     </div>
                 </div>
@@ -123,34 +118,14 @@ const handleMouseLeave = () => {
                 @mouseenter="handleMouseEnter" 
                 @mouseleave="handleMouseLeave">
                 <div class="ticker-wrapper reverse" :style="{ animationPlayState: isHovered ? 'paused' : 'running' }">
-                    <!-- First set of cards -->
                     <div class="testimonials-row">
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
+                        <div v-for="testimonial in testimonials" :key="testimonial.name + '_rev'" class="card-container">
+                            <TestimonialsCard v-bind="testimonial"/>
                         </div>
                     </div>
-                    <!-- Duplicate set for seamless loop -->
                     <div class="testimonials-row">
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
-                        </div>
-                        <div class="card-container">
-                            <TestimonialsCard/>
+                        <div v-for="testimonial in testimonials" :key="testimonial.name + '_rev_dup'" class="card-container">
+                            <TestimonialsCard v-bind="testimonial"/>
                         </div>
                     </div>
                 </div>
