@@ -1,41 +1,98 @@
 <script setup lang="ts">
 import Usecases from './components/UseCases/Usecases.vue';
-
+import TestimonialsSection from './components/Testimonials/TestimonialsSection.vue';
 
 const testimonialData = {
   title: "What our users are saying",
   description: "Hear what our users have to say about Waveflow's user-friendly interface and powerful automation features.",
   testimonials: [
     {
-      avatar: "/assets/Testimonials/Avatar1.png",
-      name: "Ishan Gupta",
-      designation: "CEO, AcornGlobus",
-      testimonialTitle: "Highly recommend their service",
-      testimonialDescription: "I had the privilege of working with them and am truly impressed by their professionalism, expertise, and commitment to excellence. From start to finish, their attention to detail and ability to deliver high-quality results exceeded my expectations."
+      avatar: "/assets/Testimonials/Avatar-1.png",
+      name: "John Doe",
+      designation: "CEO, TechHorizon",
+      testimonialTitle: "Outstanding platform for businesses",
+      testimonialDescription: "Waveflow has completely revolutionized our approach to managing workflows. Its intuitive design and advanced automation tools have saved us time and resources, making our operations smoother and more efficient than ever before."
     },
     {
-      avatar: "/assets/Testimonials/Avatar2.png",
-      name: "Sarah Chen",
-      designation: "CTO, TechFlow",
-      testimonialTitle: "Exceptional automation platform",
-      testimonialDescription: "Waveflow has transformed how we handle our workflows. The automation capabilities are powerful yet intuitive, and the results have been remarkable. Our team's productivity has increased significantly."
+      avatar: "/assets/Testimonials/Avatar-2.png",
+      name: "Jane Smith",
+      designation: "CTO, SmartGrid Solutions",
+      testimonialTitle: "A must-have for efficiency",
+      testimonialDescription: "Using Waveflow has streamlined our workflow and drastically improved our team's productivity. The automation features are easy to use and highly effective, helping us achieve more in less time without compromising on quality."
     },
     {
-      avatar: "/assets/Testimonials/Avatar3.png",
-      name: "Michael Ross",
-      designation: "Lead Developer, CloudScale",
-      testimonialTitle: "Game-changing solution",
-      testimonialDescription: "The integration capabilities and ease of use make Waveflow stand out. We've been able to automate complex processes with minimal effort, and the support team has been exceptional throughout."
+      avatar: "/assets/Testimonials/Avatar-3.png",
+      name: "Robert Brown",
+      designation: "Lead Developer, FutureTech",
+      testimonialTitle: "Incredibly user-friendly platform",
+      testimonialDescription: "Waveflow’s clean interface and robust functionality make it a game-changer. We've managed to automate repetitive tasks seamlessly, allowing our developers to focus on innovation and critical aspects of our projects."
     },
     {
-      avatar: "/assets/Testimonials/Avatar4.png",
-      name: "Emma Wilson",
-      designation: "Product Manager, InnovateTech",
-      testimonialTitle: "Streamlined our workflow",
-      testimonialDescription: "Waveflow has become an integral part of our development process. The intuitive interface and powerful features have helped us automate routine tasks and focus on what matters most."
+      avatar: "/assets/Testimonials/Avatar-4.png",
+      name: "Emily Davis",
+      designation: "Product Manager, VisionAI",
+      testimonialTitle: "Simplifies complex processes effortlessly",
+      testimonialDescription: "Waveflow has enabled us to automate time-consuming processes and reduce errors significantly. The platform's reliability and ease of use have been instrumental in helping us meet deadlines and exceed client expectations."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-5.png",
+      name: "Michael Lee",
+      designation: "Operations Head, Finova",
+      testimonialTitle: "Excellent tool for automation",
+      testimonialDescription: "We’ve achieved unprecedented efficiency with Waveflow. Its powerful features and excellent customer support have made it an essential tool for managing our operations effectively."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-6.png",
+      name: "Sophia White",
+      designation: "Team Lead, CodeCraft",
+      testimonialTitle: "Improved team productivity",
+      testimonialDescription: "Waveflow has been instrumental in automating our daily processes, resulting in improved productivity and reduced errors. The intuitive dashboard makes it simple to use for our entire team."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-7.png",
+      name: "William Green",
+      designation: "Founder, Innovent",
+      testimonialTitle: "Streamlines tasks effectively",
+      testimonialDescription: "With Waveflow, our business processes have become more streamlined. The platform is highly intuitive, saving us countless hours every week."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-8.png",
+      name: "Chloe Martinez",
+      designation: "Marketing Manager, BrandHive",
+      testimonialTitle: "Boosted campaign management",
+      testimonialDescription: "The automation tools in Waveflow have made managing campaigns easier and faster. Our marketing team has significantly benefited from the platform’s robust features."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-9.png",
+      name: "Daniel Carter",
+      designation: "Analyst, DataSphere",
+      testimonialTitle: "Great for data workflows",
+      testimonialDescription: "Waveflow has simplified our data workflows and allowed us to focus on insights rather than tedious tasks. The automation features are top-notch and reliable."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-10.png",
+      name: "Emma Johnson",
+      designation: "Consultant, Stratify",
+      testimonialTitle: "Highly intuitive platform",
+      testimonialDescription: "Waveflow’s ease of use and powerful automation tools make it stand out. It has saved us valuable time and effort in managing our clients’ needs."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-11.png",
+      name: "James Patel",
+      designation: "Director, NexTech",
+      testimonialTitle: "Essential for business automation",
+      testimonialDescription: "Waveflow is a game-changer for businesses looking to automate repetitive tasks. The platform is intuitive and comes with excellent customer support."
+    },
+    {
+      avatar: "/assets/Testimonials/Avatar-12.png",
+      name: "Olivia Walker",
+      designation: "Head of Design, CreativeEdge",
+      testimonialTitle: "Transformed our workflow",
+      testimonialDescription: "Waveflow has transformed how our team collaborates and manages tasks. The automation features have made our processes faster and more efficient than ever."
     }
   ]
 };
+
 
 const faqData = {
   label: "Support",
