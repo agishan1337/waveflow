@@ -14,14 +14,17 @@ import PricingCard from './PricingCard.vue';
          <div class="flex flex-col lg:flex-row gap-6 w-full max-w-3xl mx-auto">
             <PricingCard
                 planType="Lifetime Plan"
+                planDescription="Perfect for small businesses"
                 :price="199"
                 :features="['Access to all basic features', 'Basic reporting and analytics', 'Up to 10 individual users', '20GB individual data each user']"
                 buttonLabel="Get Started"
                 buttonVariant="primary"
+                :isPopular="true"
                 />
 
                 <PricingCard
-                planType="Lifetime Plan"
+                planType="Lifetime Pro Plan"
+                planDescription="Perfect for growing businesses"
                 :price="299"
                 :features="['Unlimited plugins', 'Feature 2', 'Feature 3', 'Feature 4']"
                 buttonLabel="Get Started"
