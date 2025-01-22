@@ -93,6 +93,40 @@ const testimonialData = {
   ]
 };
 
+const pricingData = {
+  title: "Pay once, use forever!",
+  description: "Choose the perfect plan for your needs. All plans include access to our core features and regular updates.",
+  pricingCards: [
+    {
+      planType: "Lifetime Plan",
+      planDescription: "Perfect for small businesses",
+      price: 199,
+      features: [
+        "Access to all basic features",
+        "Basic reporting and analytics",
+        "Up to 10 individual users",
+        "20GB individual data each user"
+      ],
+      buttonLabel: "Get Started",
+      buttonVariant: "primary",
+      isPopular: true
+    },
+    {
+      planType: "Lifetime Pro Plan",
+      planDescription: "Perfect for growing businesses",
+      price: 299,
+      features: [
+        "Everything in Basic, plus:",
+        "Advanced analytics",
+        "Unlimited team members",
+        "100GB storage per user",
+       
+      ],
+      buttonLabel: "Get Started",
+      buttonVariant: "tertiary"
+    }
+  ]
+};
 
 const faqData = {
   label: "Support",
@@ -176,7 +210,11 @@ const useCases = {
   heroImage="/assets/HeroAssets/HeroImage.png"
 />
 <ProductShowcase/>
-<PricingSection/>
+<PricingSection
+  :title="pricingData.title"
+  :description="pricingData.description"
+  :pricingCards="pricingData.pricingCards"
+/>
 <Usecases
   :title="useCases.title"
   :buttonLabel="useCases.buttonLabel"
