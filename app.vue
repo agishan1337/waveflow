@@ -93,6 +93,29 @@ const testimonialData = {
   ]
 };
 
+const productShowcaseData = {
+  productImage: "/assets/ProductShowcase/Demo.png",
+  title: "Supercharge your workflow with AI",
+  description: "Experience seamless note-taking and organization with our powerful AI features",
+  features: [
+    {
+      icon: '/assets/Icons/Bolt.png',
+      title: "AI-Powered Note Taking",
+      description: "Let AI help you organize and structure your notes automatically, saving time and effort"
+    },
+    {
+      icon: '/assets/Icons/Sparkles.png',
+      title: "Smart Search & Filtering",
+      description: "Find any note instantly with our powerful search and intelligent filtering system"
+    },
+    {
+      icon: '/assets/Icons/Chat.png',
+      title: "Real-time Collaboration",
+      description: "Work together seamlessly with real-time syncing and collaborative editing"
+    }
+  ]
+};
+
 const pricingData = {
   title: "Pay once, use forever!",
   description: "Choose the perfect plan for your needs. All plans include access to our core features and regular updates.",
@@ -213,7 +236,12 @@ const ctaData = {
   tagIcon="/assets/Icons/Bolt.png"
   heroImage="/assets/HeroAssets/HeroImage.png"
 />
-<ProductShowcase/>
+<ProductShowcase
+  :title="productShowcaseData.title"
+  :description="productShowcaseData.description"
+  :features="productShowcaseData.features"
+  :productImage="productShowcaseData.productImage"
+/>
 <PricingSection
   :title="pricingData.title"
   :description="pricingData.description"
