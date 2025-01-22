@@ -142,14 +142,19 @@ export default {
     },
     handleScroll() {
       const usecasesSection = document.getElementById('usecases')
-      if (!usecasesSection) return
-
-      const rect = usecasesSection.getBoundingClientRect()
+      const ctaSection = document.getElementById('cta')
       const headerHeight = 80 // Approximate header height
+
+      if (!usecasesSection && !ctaSection) return
+
+      const usecasesRect = usecasesSection?.getBoundingClientRect()
+      const ctaRect = ctaSection?.getBoundingClientRect()
       
-      // Check if we're within the Usecases section
-      // Top of section is at or above header bottom AND bottom of section is below header
-      this.isDark = rect.top <= headerHeight && rect.bottom > headerHeight
+      // Check if we're within either the Usecases or CTA section
+      this.isDark = (
+        (usecasesRect && usecasesRect.top <= headerHeight && usecasesRect.bottom > headerHeight) ||
+        (ctaRect && ctaRect.top <= headerHeight && ctaRect.bottom > headerHeight)
+      )
     }
   }
 }

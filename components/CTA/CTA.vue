@@ -1,5 +1,5 @@
 <template>
-    <section class="relative pt-12 md:pt-16 lg:pt-32 flex flex-col items-center justify-center px-4 md:px-16 lg:px-24 bg-bgDark">
+    <section id="cta" class="relative pt-12 md:pt-16 lg:pt-32 flex flex-col items-center justify-center px-4 md:px-16 lg:px-24 bg-bgDark">
         <div class="flex flex-col gap-4 md:gap-8 lg:max-w-4xl z-10 items-center">
             <h2 class="text-body-extra-large md:text-h3 lg:text-h2 font-Sora font-medium text-center text-white">{{ title }}</h2>
             <Button :label="buttonLabel" variant="secondary"/>
