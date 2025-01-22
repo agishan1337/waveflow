@@ -197,6 +197,10 @@ const useCases = {
   ]
 }
 
+const ctaData = {
+  title: "Unlock the knowledge buried inside your conversations",
+  buttonLabel: "Get Started - It's Free"
+};
 
 </script>
 
@@ -231,7 +235,10 @@ const useCases = {
   :description="faqData.description"
   :faqs="faqData.faqs"
 />
- 
+<CTA
+  :title="ctaData.title"
+  :buttonLabel="ctaData.buttonLabel"
+/>
 <Footer/>
 </template>
 
