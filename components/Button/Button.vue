@@ -8,7 +8,11 @@
     'transition',
     'text-body-small',
     'font-Poppins',
-    variant === 'secondary' ? 'bg-secondary hover:bg-secondaryHover text-textPrimary' : 'bg-primary hover:bg-primarydarkHover text-white',
+    {
+      'bg-primary hover:bg-primarydarkHover text-white': variant === 'primary',
+      'bg-secondary hover:bg-secondaryHover text-textPrimary': variant === 'secondary',
+      'bg-transparent hover:bg-secondary text-textPrimary border border-primary': variant === 'tertiary'
+    },
     { 'w-full': fullwidth, 'justify-center': fullwidth }
   ]">
     <img class="w-5 h-5" v-if="iconPath" :src=iconPath alt="icon" />
@@ -34,7 +38,7 @@ export default {
     variant: {
       type: String,
       default: 'primary',
-      validator: (value) => ['primary', 'secondary'].includes(value)
+      validator: (value) => ['primary', 'secondary', 'tertiary'].includes(value)
     }
   }
 }

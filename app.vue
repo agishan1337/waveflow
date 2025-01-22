@@ -176,6 +176,7 @@ const useCases = {
   heroImage="/assets/HeroAssets/HeroImage.png"
 />
 <ProductShowcase/>
+<PricingSection/>
 <Usecases
   :title="useCases.title"
   :buttonLabel="useCases.buttonLabel"
