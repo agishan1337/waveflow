@@ -22,16 +22,20 @@ defineProps<PricingSectionProps>();
 </script>
 
 <template>
-    <section class="relative py-12 md:py-16 lg:py-32 flex flex-col gap-8 md:gap-12 lg:gap-16 items-center justify-center">
-         <div class="flex flex-col gap-4 md:gap-8 lg:max-w-4xl z-10 items-center px-4 md:px-16 lg:px-24">
-            <Chip label="Pricing"/>
-            <h2 class="text-body-extra-large md:text-h3 lg:text-h2 font-Poppins font-semibold md:font-semibold lg:font-semibold text-center text-textPrimary">{{ title }}</h2>
-            <p class="md:text-body-large text-body-small font-Sora text-textSecondary text-center">{{ description }}</p>
-         </div>
-         <div class="flex flex-col lg:flex-row gap-6 w-full max-w-5xl mx-auto h-full px-4 md:px-16 lg:px-24">
-            <div v-for="card in pricingCards" :key="card.planType" class="flex-1 h-full">
-                <PricingCard v-bind="card" class="h-full"/>
+    <section class="py-12 md:py-16 lg:py-32 px-4 md:px-16 lg:px-24">
+        <div class="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-24 max-w-7xl mx-auto">
+            <div class="lg:w-1/3 flex flex-col gap-4">
+                <Chip label="Pricing"/>
+                <h2 class="text-body-extra-large md:text-h3 lg:text-h2 font-Poppins font-semibold md:font-semibold lg:font-semibold text-textPrimary">{{ title }}</h2>
+                <p class="md:text-body-large text-body-small font-Sora text-textSecondary">{{ description }}</p>
             </div>
-         </div>
+            <div class="lg:w-2/3">
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <div v-for="card in pricingCards" :key="card.planType" class="flex-1 h-full">
+                        <PricingCard v-bind="card" class="h-full"/>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </template>

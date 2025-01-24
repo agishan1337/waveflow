@@ -133,20 +133,6 @@ const pricingData = {
       buttonLabel: "Get Started",
       buttonVariant: "primary",
       isPopular: true
-    },
-    {
-      planType: "Lifetime Pro Plan",
-      planDescription: "Perfect for growing businesses",
-      price: 299,
-      features: [
-        "Everything in Basic, plus:",
-        "Advanced analytics",
-        "Unlimited team members",
-        "100GB storage per user",
-       
-      ],
-      buttonLabel: "Get Started",
-      buttonVariant: "tertiary"
     }
   ]
 };
