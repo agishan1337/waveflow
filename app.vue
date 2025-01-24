@@ -123,7 +123,7 @@ const pricingData = {
     {
       planType: "Lifetime Plan",
       planDescription: "Perfect for small businesses",
-      price: 199,
+      price: 289,
       features: [
         "Access to all basic features",
         "Basic reporting and analytics",
